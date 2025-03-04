@@ -1,14 +1,12 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center center fixed, linear-gradient(to bottom, #f0f8ff, #e6f2ff);
     background-size: cover;
     margin: 0;
     padding: 0;
     color: #333;
-    link: #ff6600;
-    alink: #cc5500;
-    vlink: #990000;
 }
+
 
 nav {
     background-color: #004080;
