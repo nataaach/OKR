@@ -5,60 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ціни</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .left-align { text-align: left; }
+        .right-align { text-align: right; }
+        .center-align { text-align: center; }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Ціни на авіаквитки</h1>
+        <h1><strong>Ціни на авіаквитки</strong></h1>
         <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="destinations.html">Напрямки</a></li>
                 <li><a href="prices.html">Ціни</a></li>
                 <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="https://www.google.com" target="_blank">Google</a></li>
+                <li><a href="#special-offers">Спеціальні пропозиції</a></li>
             </ul>
         </nav>
     </header>
 
     <section>
-        <h2>Тарифи</h2>
-        <table>
+        <table cellspacing="5" cellpadding="10">
+            <colgroup>
+                <col style="background-color: #f2f2f2;">
+                <col style="background-color: #d9edf7;">
+                <col style="background-color: #fcf8e3;">
+                <col style="background-color: #dff0d8;">
+            </colgroup>
             <thead>
                 <tr>
-                    <th>Маршрут</th>
+                    <th rowspan="2">Маршрут</th>
+                    <th colspan="2">Деталі</th>
+                    <th rowspan="2">Опис</th>
+                </tr>
+                <tr>
                     <th>Фото</th>
                     <th>Ціна</th>
-                    <th>Опис</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Київ - Париж</td>
-                    <td><img src="kyiv-paris.jpg" alt="Київ - Париж"></td>
-                    <td>$250</td>
+                    <td class="left-align"><a href="destinations.html">Київ - Париж</a></td>
+                    <td class="center-align"><img src="kyiv-paris.jpg" alt="Київ - Париж"></td>
+                    <td class="right-align" rowspan="2">$250</td>
                     <td>Популярний маршрут для туристів</td>
                 </tr>
                 <tr>
-                    <td>Львів - Берлін</td>
-                    <td><img src="lviv-berlin.jpg" alt="Львів - Берлін"></td>
-                    <td>$180</td>
+                    <td class="left-align"><a href="destinations.html">Львів - Берлін</a></td>
+                    <td class="center-align"><img src="lviv-berlin.jpg" alt="Львів - Берлін"></td>
+                    
                     <td>Швидке сполучення з Європою</td>
                 </tr>
                 <tr>
-                    <td>Одеса - Рим</td>
-                    <td><img src="odessa-rome.jpg" alt="Одеса - Рим"></td>
-                    <td>$200</td>
+                    <td class="left-align"><a href="destinations.html">Одеса - Рим</a></td>
+                    <td class="center-align"><img src="odessa-rome.jpg" alt="Одеса - Рим"></td>
+                    <td class="right-align">$200</td>
                     <td>Комфортні рейси за вигідними цінами</td>
                 </tr>
-                <tr>
-                    <td>Харків - Лондон</td>
-                    <td><img src="kharkiv-london.jpg" alt="Харків - Лондон"></td>
-                    <td>$350</td>
-                    <td>Прямий рейс до столиці Великобританії</td>
+                <tr id="special-offers">
+                    <td colspan="4" class="center-align">Спеціальні пропозиції доступні на сайті!</td>
                 </tr>
-                
             </tbody>
+            
         </table>
-        
     </section>
 
     <div class="iframe-container">
@@ -70,6 +91,5 @@
             loading="lazy">
         </iframe>
     </div>
-    
 </body>
 </html>
