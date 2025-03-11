@@ -6,14 +6,11 @@ body {
     padding: 0;
     color: #333;
 }
-
-
 nav {
     background-color: #004080;
     padding: 15px;
     text-align: center;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -21,11 +18,9 @@ nav ul {
     display: flex;
     justify-content: center;
 }
-
 nav ul li {
     margin: 0 15px;
 }
-
 nav a {
     color: white;
     text-decoration: none;
@@ -34,31 +29,26 @@ nav a {
     padding: 8px 12px;
     transition: color 0.3s, background 0.3s;
 }
-
 nav a:hover {
     color: #ffcc00;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
-
 h1 {
     text-align: center;
     color: #004080;
     margin-top: 20px;
 }
-
 h2 {
     color: #ff6600;
     text-align: center;
     margin-top: 15px;
 }
-
 h3 {
     text-align: center;
     color: #333;
     margin-top: 15px;
 }
-
 p {
     font-size: 18px;
     line-height: 1.6;
@@ -67,8 +57,6 @@ p {
     margin: 20px auto;
     padding: 0 15px;
 }
-
-
 img {
     width: 100%; 
     max-width: 600px; 
@@ -79,21 +67,17 @@ img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
 }
-
 img:hover {
     transform: scale(1.1); 
 }
-
 .resized-img {
     width: 400px;
     height: 300px;
 }
-
 .full-img {
     width: 800px;
     height: 600px;
 }
-
 .additional-img {
     width: 500px;
     height: 350px;
@@ -102,19 +86,16 @@ img:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 a {
     color: #ff6600;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
-
 a:hover {
     text-decoration: underline;
     color: #cc5500;
 }
-
 table {
     width: 90%;
     margin: 30px auto;
@@ -122,23 +103,19 @@ table {
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 th, td {
     padding: 15px;
     border: 1px solid #ddd;
     text-align: center;
 }
-
 th {
     background-color: #003366;
     color: white;
     font-size: 18px;
 }
-
 td {
     font-size: 16px;
 }
-
 img {
     display: block;
     width: 120px;
@@ -147,40 +124,33 @@ img {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 a {
     color: #0044cc;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
-
 a:hover {
     text-decoration: underline;
     color: #cc5500;
 }
-
 .complex-table {
     width: 90%;
     margin: 30px auto;
     border-collapse: collapse;
 }
-
 .complex-table th {
     background-color: #333;
     color: white;
 }
-
 .complex-table td {
     padding: 10px;
     border: 1px solid #666;
 }
-
 .colspan-cell {
     text-align: center;
     font-weight: bold;
 }
-
 .iframe-container {
     position: relative;
     width: 100%;
@@ -188,7 +158,6 @@ a:hover {
     padding-top: 56.25%; 
     margin: 30px auto;
 }
-
 .iframe-container iframe {
     position: absolute;
     top: 0;
@@ -197,4 +166,85 @@ a:hover {
     height: 100%;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* фон для body*/
+
+body {
+    background-color: #f0f8ff !important;
+}
+/*заголовки*/
+h1, h2, h3 {
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+}
+/* перевизначення стилю посилань через стиль рівня документа */
+a {
+    color: red !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #cc5500 !important;
+    text-decoration: underline;
+}
+/* марковані та нумеровані списки */
+ul, ol {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px;
+    padding-left: 25px;
+}
+ul {
+    list-style-type: square; 
+}
+ol {
+    list-style-type: decimal; 
+}
+ul li, ol li {
+    margin-bottom: 10px;
+}
+/* списки визначень */
+dl {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 5px solid #004080;
+    max-width: 600px;
+    margin: 20px auto;
+}
+dt {
+    font-weight: bold;
+    color: #004080;
+    margin-top: 10px;
+}
+dd {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #555;
+}
+/* таблиці*/
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #003366;
+    color: white;
+    font-size: 18px;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
 }
