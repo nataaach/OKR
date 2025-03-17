@@ -188,7 +188,22 @@ img:hover {
     margin-top: 50px;
 }
 
+/*Контекстний селектор*/
+nav ul li a {
+    font-style: italic;
+}
 
+/*Сусідній селектор*/
+h1 + p {
+    font-weight: bold; 
+    color: darkblue; 
+}
 
+/*Дочірній селектор*/
+nav > ul {
+    border-bottom: 2px solid white; 
+}
 
-
+section > h2 {
+    text-decoration: underline; 
+}
