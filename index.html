@@ -5,27 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авіаквитки Онлайн</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        a {
+            color: red; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+    
+    </style>
+    
 </head>
 <body>
 
     <header>
         <h1 id="main-title">Ласкаво просимо до сервісу авіаквитків!</h1>
         <nav>
+            <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="destinations.html">Напрямки</a></li>
                 <li><a href="prices.html">Ціни</a></li>
                 <li><a href="contacts.html">Контакти</a></li>
             </ul>
+            </nav>
         </nav>
+
     </header>
 
-    <p class="highlight">Тут ви знайдете авіаквитки за найкращими цінами.</p>
-    <section class="main-content">
-        <h2>Знаходь та бронюй квитки легко!</h2>
-        <p>Обирай напрямок та найвигідніший квиток.</p>
-        <img src="airplane.jpg" alt="Авіапереліт">
-    </section>
+<!-- Блочний елемент з позиціонуванням -->
+<div id="info-box">
+    <h3>Корисна інформація</h3>
+</div>
+
+<!-- Плаваючий блок зліва -->
+<img src="airplane.jpg" alt="Авіапереліт" class="float-left" width="200">
+
+<!-- Плаваючий блок справа -->
+<div class="float-right">
+    <h4>Знижки!</h4>
+    <p>До -30% на рейси цього тижня!</p>
+</div>
+
+<!-- Рядковий елемент -->
+<p>Ми пропонуємо <span class="highlight">найкращі ціни</span> для вас!</p>
 
     <h3 id="offers">Спеціальні пропозиції</h3>
     <ul>
@@ -34,7 +56,7 @@
         <li>Одеса - Берлін</li>
     </ul>
 
-    <p style="font-size: 20px !important; color: blue; line-height: 1.8; text-align: left;">
+    <p >
         Наш сервіс дозволяє швидко та зручно бронювати авіаквитки по всьому світу. Ми пропонуємо актуальні знижки, спеціальні пропозиції та комфортні умови для подорожей. Обирайте найкращі варіанти перельотів та насолоджуйтесь подорожами без зайвих турбот!
     </p>
 

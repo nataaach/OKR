@@ -51,19 +51,19 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffcc00;
+    color: #084050;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
 
 a {
-    color: red !important;
+    color: rgb(116, 172, 222) !important;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
-    color: #cc5500 !important;
+    color: #83d2e4 !important;
     text-decoration: underline;
 }
 
@@ -206,4 +206,81 @@ nav > ul {
 
 section > h2 {
     text-decoration: underline; 
+}
+
+/* Плаваючі блоки */
+.float-left {
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.float-right {
+    float: right;
+    width: 250px;
+    background-color: #f9f9f9;
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+/* Позиціонування блоку */
+#info-box {
+    position: relative;
+    top: 10px;
+    left: 15px;
+    background-color: #e0f7fa;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Рядковий елемент */
+.highlight {
+    color: rgb(84, 124, 226);
+    font-weight: bold;
+    background-color: rgb(135, 203, 224);
+}
+
+/* Псевдокласи для посилань */
+a:link {
+    color: rgb(89, 45, 194);
+}
+
+a:visited {
+    color: gray;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(72, 150, 218);
+}
+
+ul li:first-child {
+    font-weight: bold;
+    background-color: #cce6ff; 
+}
+
+
+
+/* Псевдоелементи :before і :after */
+h3::before {
+    content: "✈ ";
+    color: navy;
+}
+
+h3::after {
+    content: " ✈";
+    color: navy;
+}
+ul li {
+    color: #003366;
+    padding: 3px 5px;
+    background-color: #e0f0ff;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
