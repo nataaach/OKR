@@ -6,12 +6,6 @@
     <title>Авіаквитки Онлайн</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        a {
-            color: red; 
-            text-decoration: none; 
-            font-weight: bold; 
-        }
-    
     </style>
     
 </head>
@@ -20,33 +14,28 @@
     <header>
         <h1 id="main-title">Ласкаво просимо до сервісу авіаквитків!</h1>
         <nav>
-            <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="destinations.html">Напрямки</a></li>
                 <li><a href="prices.html">Ціни</a></li>
                 <li><a href="contacts.html">Контакти</a></li>
             </ul>
-            </nav>
         </nav>
 
     </header>
 
-<!-- Блочний елемент з позиціонуванням -->
 <div id="info-box">
+    Актуальна порада для мандрівників:
     <h3>Корисна інформація</h3>
 </div>
 
-<!-- Плаваючий блок зліва -->
 <img src="airplane.jpg" alt="Авіапереліт" class="float-left" width="200">
 
-<!-- Плаваючий блок справа -->
 <div class="float-right">
     <h4>Знижки!</h4>
     <p>До -30% на рейси цього тижня!</p>
 </div>
 
-<!-- Рядковий елемент -->
 <p>Ми пропонуємо <span class="highlight">найкращі ціни</span> для вас!</p>
 
     <h3 id="offers">Спеціальні пропозиції</h3>
@@ -74,6 +63,11 @@
         <dt>Чартерний рейс</dt>
         <dd>Спеціальний рейс, що виконується за замовленням туроператора.</dd>
     </dl>
+
+    <div id="redirect-info" style="margin: 20px 0; padding: 10px; background-color: #f0f0f0; border-radius: 5px;"></div>
+    
+    <script src="script.js"></script>
+    <script src="dialog.js"></script>
 
 </body>
 </html>

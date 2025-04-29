@@ -188,18 +188,15 @@ img:hover {
     margin-top: 50px;
 }
 
-/*Контекстний селектор*/
 nav ul li a {
     font-style: italic;
 }
 
-/*Сусідній селектор*/
 h1 + p {
     font-weight: bold; 
     color: darkblue; 
 }
 
-/*Дочірній селектор*/
 nav > ul {
     border-bottom: 2px solid white; 
 }
@@ -208,7 +205,6 @@ section > h2 {
     text-decoration: underline; 
 }
 
-/* Плаваючі блоки */
 .float-left {
     float: left;
     margin-right: 20px;
@@ -225,7 +221,6 @@ section > h2 {
     margin-left: 20px;
 }
 
-/* Позиціонування блоку */
 #info-box {
     position: relative;
     top: 10px;
@@ -235,16 +230,14 @@ section > h2 {
     margin-bottom: 20px;
 }
 
-/* Рядковий елемент */
 .highlight {
     color: rgb(84, 124, 226);
     font-weight: bold;
     background-color: rgb(135, 203, 224);
 }
 
-/* Псевдокласи для посилань */
 a:link {
-    color: rgb(89, 45, 194);
+    color: rgb(45, 72, 194);
 }
 
 a:visited {
@@ -265,9 +258,6 @@ ul li:first-child {
     background-color: #cce6ff; 
 }
 
-
-
-/* Псевдоелементи :before і :after */
 h3::before {
     content: "✈ ";
     color: navy;
@@ -284,3 +274,24 @@ ul li {
     border-radius: 5px;
     margin-bottom: 5px;
 }
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav li a {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav li a:hover {
+    background-color: #004a99;
+  }
+  
