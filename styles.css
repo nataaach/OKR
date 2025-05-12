@@ -5,12 +5,12 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: url('background.jpg') no-repeat center center fixed, linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+    background-color: #e6f2ff; 
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
-    color: #333;
-    text-align: center;
-    padding: 20px;
 }
 
 h1, h2, h3 {
@@ -294,4 +294,52 @@ nav ul {
   nav li a:hover {
     background-color: #004a99;
   }
-  
+/*
+ 7лаба
+*/
+  .container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.flight-card {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.highlight {
+    background-color: #ffeb3b;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.menu button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#flightsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#flightsList li {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#flightsList li:hover {
+    background-color: #e0e0e0;
+}

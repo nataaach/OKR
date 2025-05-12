@@ -3,93 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ціни</title>
+    <title>Авіаквитки - Ціни та бронювання</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         th, td {
-            border: 1px solid black;
-            padding: 10px;
+            border: 1px solid #ddd;
+            padding: 12px;
             text-align: center;
+        }
+        th {
+            background-color: #0066cc;
+            color: white;
         }
         .left-align { text-align: left; }
         .right-align { text-align: right; }
         .center-align { text-align: center; }
+        
+        .flight-card {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .flight-card:hover {
+            background-color: #f0f0f0;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+        }
+        .menu {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .menu button {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .menu button:hover {
+            background-color: #004d99;
+        }
+        #flightsList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #flightsList li {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        #flightsList li:hover {
+            background-color: #e0e0e0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #004d99;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .iframe-container {
+            margin: 30px auto;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1><strong>Ціни на авіаквитки</strong></h1>
-        <p>Оновлені ціни на популярні напрямки.</p>
-        <p>Забронюйте квитки заздалегідь, щоб отримати найкращі пропозиції!</p>
+        <h1><strong>Авіаквитки - Ціни та бронювання</strong></h1>
+        <p>Оновлені ціни на популярні напрямки та можливість онлайн-бронювання.</p>
         <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="destinations.html">Напрямки</a></li>
                 <li><a href="prices.html">Ціни</a></li>
                 <li><a href="contacts.html">Контакти</a></li>
-                <li><a href="https://www.google.com" target="_blank">Google</a></li>
+                <li><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a></li>
                 <li><a href="#special-offers">Спеціальні пропозиції</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <table cellspacing="5" cellpadding="10">
-            <colgroup>
-                <col style="background-color: #f2f2f2;">
-                <col style="background-color: #d9edf7;">
-                <col style="background-color: #fcf8e3;">
-                <col style="background-color: #dff0d8;">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th rowspan="2">Маршрут</th>
-                    <th colspan="2">Деталі</th>
-                    <th rowspan="2">Опис</th>
-                </tr>
-                <tr>
-                    <th>Фото</th>
-                    <th>Ціна</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="left-align"><a href="destinations.html">Київ - Париж</a></td>
-                    <td class="center-align"><img src="kyiv-paris.jpg" alt="Київ - Париж"></td>
-                    <td class="right-align" rowspan="2">$250</td>
-                    <td>Популярний маршрут для туристів</td>
-                </tr>
-                <tr>
-                    <td class="left-align"><a href="destinations.html">Львів - Берлін</a></td>
-                    <td class="center-align"><img src="lviv-berlin.jpg" alt="Львів - Берлін"></td>
-                    <td>Швидке сполучення з Європою</td>
-                </tr>
-                <tr>
-                    <td class="left-align"><a href="destinations.html">Одеса - Рим</a></td>
-                    <td class="center-align"><img src="odessa-rome.jpg" alt="Одеса - Рим"></td>
-                    <td class="right-align">$200</td>
-                    <td>Комфортні рейси за вигідними цінами</td>
-                </tr>
-                <tr id="special-offers">
-                    <td colspan="4" class="center-align">Спеціальні пропозиції доступні на сайті!</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    <main>
+        <section>
+            <h2>Ціни на авіаквитки</h2>
+            <p>Нижче наведено актуальні ціни на популярні маршрути. Клікніть на назву маршруту для детальної інформації.</p>
+            
+            <table>
+                <colgroup>
+                    <col style="background-color: #f2f2f2;">
+                    <col style="background-color: #d9edf7;">
+                    <col style="background-color: #fcf8e3;">
+                    <col style="background-color: #dff0d8;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Маршрут</th>
+                        <th colspan="2">Деталі</th>
+                        <th rowspan="2">Опис</th>
+                    </tr>
+                    <tr>
+                        <th>Фото</th>
+                        <th>Ціна</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="left-align"><a href="destinations.html">Київ - Париж</a></td>
+                        <td class="center-align"><img src="kyiv-paris.jpg" alt="Київ - Париж" width="100"></td>
+                        <td class="right-align" rowspan="2">$250</td>
+                        <td>Популярний маршрут для туристів</td>
+                    </tr>
+                    <tr>
+                        <td class="left-align"><a href="destinations.html">Львів - Берлін</a></td>
+                        <td class="center-align"><img src="lviv-berlin.jpg" alt="Львів - Берлін" width="100"></td>
+                        <td>Швидке сполучення з Європою</td>
+                    </tr>
+                    <tr>
+                        <td class="left-align"><a href="destinations.html">Одеса - Рим</a></td>
+                        <td class="center-align"><img src="odessa-rome.jpg" alt="Одеса - Рим" width="100"></td>
+                        <td class="right-align">$200</td>
+                        <td>Комфортні рейси за вигідними цінами</td>
+                    </tr>
+                    <tr id="special-offers">
+                        <td colspan="4" class="center-align">Спеціальні пропозиції доступні на сайті!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-    <div class="iframe-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508616!2d144.9537363155046!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f7d2cf%3A0x7b7ef16a3e72b7fd!2sFederation+Square!5e0!3m2!1sen!2sus!4v1510911996196" 
-            width="600" 
-            height="400" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
-    </div>
+        <section class="container">
+            <h2>Онлайн-бронювання</h2>
+            
+            <div id="flight1" class="flight-card" onclick="handleClickAttribute()">
+                Рейс #1: Київ - Львів | 10:00 - 11:30
+            </div>
+            
+            <div id="flight2" class="flight-card">
+                Рейс #2: Одеса - Варшава | 14:00 - 15:45
+            </div>
+            
+            <div id="flight3" class="flight-card">
+                Рейс #3: Харків - Івано-Франківськ | 08:30 - 10:15
+            </div>
+            
+            <h3>Оберіть рейс:</h3>
+            <ul id="flightsList">
+                <li>Рейс #101: Київ - Нью-Йорк</li>
+                <li>Рейс #202: Львів - Лондон</li>
+                <li>Рейс #303: Одеса - Берлін</li>
+                <li>Рейс #404: Харків - Париж</li>
+            </ul>
+            
+            <h3>Меню керування бронюванням:</h3>
+            <div class="menu">
+                <button data-action="book">Забронювати</button>
+                <button data-action="cancel">Скасувати</button>
+                <button data-action="change">Змінити</button>
+                <button data-action="details">Деталі</button>
+            </div>
+        </section>
+
+        <div class="iframe-container">
+            <h2>Наші представництва на карті</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508616!2d144.9537363155046!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1f7d2cf%3A0x7b7ef16a3e72b7fd!2sFederation+Square!5e0!3m2!1sen!2sus!4v1510911996196" 
+                width="600" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                title="Карта з нашими представництвами">
+            </iframe>
+        </div>
+    </main>
+
+    <script>
+        function handleClickAttribute() {
+            alert("Ви вибрали рейс №1: Київ - Львів.");
+        }
+    
+        const flight2 = document.getElementById('flight2');
+        flight2.onclick = function () {
+            alert("Ви вибрали рейс №2: Одеса - Варшава.");
+        };
+    
+        const flight3 = document.getElementById('flight3');
+    
+        function firstHandler() {
+            console.log("Вибрано рейс №3: Харків - Івано-Франківськ (лог перший).");
+        }
+    
+        function secondHandler() {
+            console.log("Вибрано рейс №3: Харків - Івано-Франківськ (лог другий).");
+        }
+    
+        flight3.addEventListener('click', firstHandler);
+        flight3.addEventListener('click', secondHandler);
+    
+        const flightsList = document.getElementById('flightsList');
+    
+        flightsList.addEventListener('click', (event) => {
+            if (event.target.tagName === 'LI') {
+                [...flightsList.children].forEach(li => li.classList.remove('highlight'));
+                event.target.classList.add('highlight');
+            }
+        });
+    
+        const menu = document.querySelector('.menu');
+        menu.addEventListener('click', (event) => {
+            const action = event.target.dataset.action;
+            if (!action) return;
+    
+            switch (action) {
+                case 'book':
+                    alert("Рейс заброньовано.");
+                    break;
+                case 'cancel':
+                    alert("Бронювання скасовано.");
+                    break;
+                case 'change':
+                    alert("Змінити деталі рейсу.");
+                    break;
+                case 'details':
+                    alert("Відображення деталей рейсу.");
+                    break;
+                default:
+                    console.log("Невідома дія:", action);
+            }
+        });
+    
+        const removeButton = document.createElement('button');
+        removeButton.textContent = "Видалити події з Рейсу №3";
+        removeButton.style.marginTop = "20px";
+        document.querySelector('.container').appendChild(removeButton);
+    
+        removeButton.addEventListener('click', () => {
+            flight3.removeEventListener('click', firstHandler);
+            flight3.removeEventListener('click', secondHandler);
+            alert("Події для Рейсу №3 видалені.");
+        });
+    </script>
+    
+
 </body>
 </html>
