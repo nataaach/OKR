@@ -249,18 +249,22 @@
         };
     
         const flight3 = document.getElementById('flight3');
-    
-        function firstHandler() {
-            console.log("Вибрано рейс №3: Харків - Івано-Франківськ (лог перший).");
-        }
-    
-        function secondHandler() {
-            console.log("Вибрано рейс №3: Харків - Івано-Франківськ (лог другий).");
-        }
-    
-        flight3.addEventListener('click', firstHandler);
-        flight3.addEventListener('click', secondHandler);
-    
+
+function firstHandler() {
+    alert("Вибрано рейс №3: Харків - Івано-Франківськ (лог перший).");
+}
+
+function secondHandler() {
+    alert("Вибрано рейс №3: Харків - Івано-Франківськ (лог другий).");
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    flight3.addEventListener('click', firstHandler);
+    flight3.addEventListener('click', secondHandler);
+});
+
+
+
         const flightsList = document.getElementById('flightsList');
     
         flightsList.addEventListener('click', (event) => {
@@ -269,6 +273,8 @@
                 event.target.classList.add('highlight');
             }
         });
+
+
     
         const menu = document.querySelector('.menu');
         menu.addEventListener('click', (event) => {
@@ -303,8 +309,31 @@
             flight3.removeEventListener('click', secondHandler);
             alert("Події для Рейсу №3 видалені.");
         });
-    </script>
-    
+
+        const restoreButton = document.createElement('button');
+restoreButton.textContent = "Повернути події для Рейсу №3";
+restoreButton.style.marginTop = "10px";
+document.querySelector('.container').appendChild(restoreButton);
+
+restoreButton.addEventListener('click', () => {
+    flight3.addEventListener('click', firstHandler);
+    flight3.addEventListener('click', secondHandler);
+    alert("Події для Рейсу №3 відновлено.");
+});
+
+const listHandler = {
+    handleEvent(event) {
+        alert("Ви натиснули на список доступних рейсів." + event.currentTarget.id);
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const flightsList = document.getElementById('flightsList');
+    flightsList.addEventListener('click', listHandler);
+});
+
+
+ </script>
 
 </body>
 </html>

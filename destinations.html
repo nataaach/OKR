@@ -3,10 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Напрямки</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Популярні авіанапрямки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e6f2ff, #b3d9ff);
+            margin: 0;
+            padding: 20px;
+            color: #003366;
+        }
+
+        header {
+            background-color: rgba(0, 102, 204, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: white;
+            margin: 0;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 10px 0 0 0;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #0066cc;
+        }
+
+        #main-title {
+            text-align: center;
+            color: #004080;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+        }
+
+        table {
+            background-color: white;
+            border-collapse: collapse;
+            margin: 20px 0;
+            width: 100%;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #99ccff;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0066cc;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f0f7ff;
+        }
+
+        tr:hover {
+            background-color: #e6f2ff;
+        }
+
+        caption {
+            font-size: 1.2em;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #004080;
+            text-align: center;
+        }
+
+        #message-box {
+            padding: 12px;
+            background-color: #e6f2ff;
+            border: 1px solid #99ccff;
+            margin: 15px 0;
+            border-radius: 5px;
+            color: #004080;
+            text-align: center;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        #favorites {
+            min-height: 120px;
+            border: 2px dashed #0066cc;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            background-color: #f0f7ff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .destination-img {
+            cursor: grab;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            border: 2px solid white;
+        }
+
+        .destination-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+            border-color: #0066cc;
+        }
+
+        ol {
+            background-color: #f0f7ff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            border-left: 5px solid #0066cc;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #004080;
+            text-decoration: underline;
+        }
+
+        .city-link {
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .city-link:hover {
+            color: #004080;
+        }
+    </style>
 </head>
-<body background="background.jpg">
+<body>
     <header>
         <h1>Популярні авіанапрямки</h1>
         <nav>
@@ -21,20 +196,21 @@
 
     <section>
         <h1 id="main-title">Найпопулярніші рейси</h1>
-
         <p>Ми пропонуємо найкращі авіаперельоти з України до популярних міст Європи та світу.</p>
 
-        <table border="1" cellpadding="5" cellspacing="2">
+        <div id="message-box">Наведіть курсор або перетягніть зображення міста.</div>
+
+        <table>
             <caption><strong>Популярні напрямки</strong></caption>
-            <tr bgcolor="lightgray">
-                <th><img src="kharkiv-london.jpg" alt="Лондон" width="100"></th>
-                <th><img src="kyiv-paris.jpg" alt="Париж" width="100"></th>
-                <th><img src="lviv-berlin.jpg" alt="Берлін" width="100"></th>
+            <tr>
+                <th><img src="kharkiv-london.jpg" alt="Лондон" width="100" class="destination-img" draggable="true"></th>
+                <th><img src="kyiv-paris.jpg" alt="Париж" width="100" class="destination-img" draggable="true"></th>
+                <th><img src="lviv-berlin.jpg" alt="Берлін" width="100" class="destination-img" draggable="true"></th>
             </tr>
             <tr>
-                <td><a href="https://www.visitlondon.com/">Лондон</a></td>
-                <td><a href="https://en.parisinfo.com/">Париж</a></td>
-                <td><a href="https://www.visitberlin.de/">Берлін</a></td>
+                <td><a href="https://www.visitlondon.com/" class="city-link">Лондон</a></td>
+                <td><a href="https://en.parisinfo.com/" class="city-link">Париж</a></td>
+                <td><a href="https://www.visitberlin.de/" class="city-link">Берлін</a></td>
             </tr>
             <tr>
                 <td>Столиця Великої Британії, відома Біг-Беном, Тауером і Темзою.</td>
@@ -43,9 +219,14 @@
             </tr>
         </table>
 
+        <h3>Мої фаворити (перетягни сюди улюблені напрямки)</h3>
+        <div id="favorites">
+            <p style="color: #6699cc;">Перетягніть сюди улюблені міста</p>
+        </div>
 
-        <table border="1" cellpadding="5" cellspacing="2">
-            <tr bgcolor="lightgray">
+        <table>
+            <caption><strong>Розклад рейсів</strong></caption>
+            <tr>
                 <th>Маршрут</th>
                 <th>Час у дорозі</th>
                 <th>Частота рейсів</th>
@@ -77,8 +258,6 @@
             </tr>
         </table>
 
-        
-        
         <h3>Детальніше про міста</h3>
         <ol>
             <li>Лондон – історична столиця Великої Британії.</li>
@@ -88,5 +267,89 @@
             <li>Відень – столиця класичної музики.</li>
         </ol>
     </section>
+
+    <script>
+        const messageBox = document.getElementById('message-box');
+        const favoritesBox = document.getElementById('favorites');
+
+        document.querySelectorAll('.destination-img').forEach(img => {
+            img.addEventListener('mouseover', (e) => {
+                messageBox.textContent = `Переглядаємо напрямок: ${e.target.alt}`;
+                messageBox.style.backgroundColor = '#cce6ff';
+            });
+
+            img.addEventListener('mouseout', (e) => {
+                messageBox.textContent = `Завершено перегляд: ${e.target.alt}`;
+                messageBox.style.backgroundColor = '#e6f2ff';
+            });
+
+            img.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', e.target.src);
+                e.dataTransfer.setData('alt', e.target.alt);
+                messageBox.textContent = `Перетягуємо: ${e.target.alt}`;
+                messageBox.style.backgroundColor = '#b3d9ff';
+            });
+        });
+
+        document.querySelectorAll('.city-link').forEach(link => {
+            link.addEventListener('mouseover', (e) => {
+                messageBox.textContent = `Готуємось забронювати квиток до: ${e.target.textContent}`;
+                messageBox.style.backgroundColor = '#cce6ff';
+            });
+
+            link.addEventListener('mouseout', (e) => {
+                messageBox.textContent = `Приховано інформацію про: ${e.target.textContent}`;
+                messageBox.style.backgroundColor = '#e6f2ff';
+            });
+        });
+
+        favoritesBox.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            favoritesBox.style.backgroundColor = '#d9ecff';
+            favoritesBox.style.borderColor = '#004080';
+        });
+
+        favoritesBox.addEventListener('dragleave', () => {
+            favoritesBox.style.backgroundColor = '#f0f7ff';
+            favoritesBox.style.borderColor = '#0066cc';
+        });
+
+        favoritesBox.addEventListener('drop', (e) => {
+            e.preventDefault();
+            favoritesBox.style.backgroundColor = '#e6f2ff';
+            favoritesBox.style.borderColor = '#0066cc';
+
+            const imgSrc = e.dataTransfer.getData('text/plain');
+            const alt = e.dataTransfer.getData('alt');
+
+            const alreadyAdded = Array.from(favoritesBox.querySelectorAll('img')).some(img => img.src === imgSrc);
+
+            if (!alreadyAdded) {
+                const newImg = document.createElement('img');
+                newImg.src = imgSrc;
+                newImg.alt = alt;
+                newImg.width = 80;
+                newImg.style.border = '2px solid #0066cc';
+                newImg.style.borderRadius = '6px';
+                newImg.style.margin = '5px';
+                newImg.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
+                favoritesBox.appendChild(newImg);
+                favoritesBox.querySelector('p')?.remove();
+                messageBox.textContent = `Додано до фаворитів: ${alt}`;
+                messageBox.style.backgroundColor = '#b3d9ff';
+                
+                setTimeout(() => {
+                    messageBox.style.backgroundColor = '#e6f2ff';
+                }, 2000);
+            } else {
+                messageBox.textContent = `${alt} вже є у фаворитах.`;
+                messageBox.style.backgroundColor = '#ffcccc';
+                
+                setTimeout(() => {
+                    messageBox.style.backgroundColor = '#e6f2ff';
+                }, 2000);
+            }
+        });
+    </script>
 </body>
 </html>
